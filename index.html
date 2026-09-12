@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prediction Foot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>⚽ Prediction Tirs Cadres</h1>
+
+<label>🏠 Equipe domicile</label>
+<input type="text" id="nom_dom" value="PSG">
+
+<label>✈️ Equipe exterieur</label>
+<input type="text" id="nom_ext" value="OM">
+
+<button onclick="recuperer()">📥 Recuperer derniers matchs</button>
+
+<label>🏠 Tirs cadres DOMICILE - Match 1</label>
+<input type="number" id="dom_m1" value="0">
+
+<label>🏠 Tirs cadres DOMICILE - Match 2</label>
+<input type="number" id="dom_m2" value="0">
+
+<label>🏠 Tirs cadres DOMICILE - Match 3</label>
+<input type="number" id="dom_m3" value="0">
+
+<label>✈️ Tirs cadres EXTERIEUR - Match 1</label>
+<input type="number" id="ext_m1" value="0">
+
+<label>✈️ Tirs cadres EXTERIEUR - Match 2</label>
+<input type="number" id="ext_m2" value="0">
+
+<label>✈️ Tirs cadres EXTERIEUR - Match 3</label>
+<input type="number" id="ext_m3" value="0">
+
+<button onclick="predire()">🔮 Predire</button>
+
+<div id="resultat"></div>
+
+<script src="script.js"></script>
+</body>
+  </html>
