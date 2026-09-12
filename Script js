@@ -1,0 +1,236 @@
+var baseDonnees = {
+// === PREMIER LEAGUE (20) ===
+"Arsenal": { tirsCadres: [7, 6, 8] },
+"Aston Villa": { tirsCadres: [6, 5, 7] },
+"Bournemouth": { tirsCadres: [4, 5, 4] },
+"Brentford": { tirsCadres: [5, 4, 6] },
+"Brighton": { tirsCadres: [6, 4, 7] },
+"Chelsea": { tirsCadres: [6, 4, 5] },
+"Crystal Palace": { tirsCadres: [4, 5, 4] },
+"Everton": { tirsCadres: [3, 4, 5] },
+"Fulham": { tirsCadres: [5, 4, 5] },
+"Ipswich": { tirsCadres: [3, 4, 3] },
+"Leicester": { tirsCadres: [4, 5, 4] },
+"Liverpool": { tirsCadres: [6, 5, 7] },
+"Manchester City": { tirsCadres: [8, 7, 6] },
+"Manchester United": { tirsCadres: [6, 5, 7] },
+"Newcastle": { tirsCadres: [6, 5, 6] },
+"Nottingham Forest": { tirsCadres: [5, 4, 5] },
+"Southampton": { tirsCadres: [3, 3, 4] },
+"Tottenham": { tirsCadres: [5, 6, 4] },
+"West Ham": { tirsCadres: [4, 5, 5] },
+"Wolves": { tirsCadres: [4, 6, 5] },
+
+// === LIGA (20) ===
+"Alaves": { tirsCadres: [4, 3, 5] },
+"Athletic Bilbao": { tirsCadres: [5, 4, 6] },
+"Atletico": { tirsCadres: [5, 4, 7] },
+"Barcelone": { tirsCadres: [5, 7, 8] },
+"Betis": { tirsCadres: [5, 6, 4] },
+"Celta Vigo": { tirsCadres: [4, 5, 5] },
+"Espanyol": { tirsCadres: [3, 4, 4] },
+"Getafe": { tirsCadres: [3, 4, 3] },
+"Girona": { tirsCadres: [5, 6, 5] },
+"Las Palmas": { tirsCadres: [4, 5, 4] },
+"Leganes": { tirsCadres: [3, 4, 3] },
+"Mallorca": { tirsCadres: [4, 5, 4] },
+"Osasuna": { tirsCadres: [4, 4, 5] },
+"Rayo Vallecano": { tirsCadres: [4, 5, 4] },
+"Real Madrid": { tirsCadres: [7, 6, 8] },
+"Real Sociedad": { tirsCadres: [5, 5, 6] },
+"Sevilla": { tirsCadres: [5, 4, 6] },
+"Valence": { tirsCadres: [4, 5, 5] },
+"Valladolid": { tirsCadres: [3, 3, 4] },
+"Villarreal": { tirsCadres: [5, 6, 5] },
+
+// === BUNDESLIGA (18) ===
+"Bayern": { tirsCadres: [7, 6, 8] },
+"Dortmund": { tirsCadres: [6, 5, 7] },
+"Leipzig": { tirsCadres: [6, 5, 6] },
+"Stuttgart": { tirsCadres: [5, 6, 5] },
+"Hoffenheim": { tirsCadres: [5, 4, 6] },
+"Leverkusen": { tirsCadres: [6, 7, 6] },
+"Freiburg": { tirsCadres: [5, 5, 4] },
+"Eintracht Francfort": { tirsCadres: [6, 5, 6] },
+"Augsbourg": { tirsCadres: [4, 5, 4] },
+"Mayence": { tirsCadres: [4, 4, 5] },
+"Union Berlin": { tirsCadres: [4, 5, 4] },
+"Mönchengladbach": { tirsCadres: [5, 4, 5] },
+"Werder Brême": { tirsCadres: [5, 4, 5] },
+"Hambourg": { tirsCadres: [4, 4, 5] },
+"Cologne": { tirsCadres: [4, 5, 4] },
+"Schalke 04": { tirsCadres: [4, 4, 4] },
+"Elversberg": { tirsCadres: [3, 4, 3] },
+"Paderborn": { tirsCadres: [3, 4, 3] },
+
+// === SERIE A (20) ===
+"Juventus": { tirsCadres: [5, 4, 6] },
+"Inter": { tirsCadres: [7, 6, 5] },
+"Naples": { tirsCadres: [6, 5, 7] },
+"Milan": { tirsCadres: [5, 6, 4] },
+"Roma": { tirsCadres: [5, 6, 4] },
+"Atalanta": { tirsCadres: [6, 5, 6] },
+"Lazio": { tirsCadres: [5, 5, 6] },
+"Fiorentina": { tirsCadres: [5, 6, 5] },
+"Bologne": { tirsCadres: [5, 4, 5] },
+"Torino": { tirsCadres: [4, 4, 5] },
+"Udinese": { tirsCadres: [4, 5, 4] },
+"Genoa": { tirsCadres: [4, 4, 5] },
+"Cagliari": { tirsCadres: [4, 4, 4] },
+"Verona": { tirsCadres: [4, 5, 4] },
+"Empoli": { tirsCadres: [3, 4, 4] },
+"Parme": { tirsCadres: [3, 4, 3] },
+"Lecce": { tirsCadres: [3, 4, 3] },
+"Como": { tirsCadres: [4, 4, 4] },
+"Monza": { tirsCadres: [3, 3, 4] },
+"Venezia": { tirsCadres: [3, 4, 3] },
+
+// === LIGUE 1 (18) ===
+"PSG": { tirsCadres: [6, 5, 8] },
+"OM": { tirsCadres: [4, 5, 6] },
+"Lyon": { tirsCadres: [5, 4, 6] },
+"Monaco": { tirsCadres: [6, 7, 8] },
+"Lille": { tirsCadres: [5, 4, 5] },
+"Nice": { tirsCadres: [5, 4, 5] },
+"Lens": { tirsCadres: [5, 4, 5] },
+"Rennes": { tirsCadres: [4, 5, 5] },
+"Reims": { tirsCadres: [4, 4, 5] },
+"Toulouse": { tirsCadres: [4, 5, 4] },
+"Strasbourg": { tirsCadres: [4, 5, 4] },
+"Nantes": { tirsCadres: [4, 4, 4] },
+"Brest": { tirsCadres: [4, 5, 4] },
+"Montpellier": { tirsCadres: [3, 4, 4] },
+"Le Havre": { tirsCadres: [3, 4, 3] },
+"Auxerre": { tirsCadres: [3, 4, 3] },
+"Angers": { tirsCadres: [3, 3, 4] },
+"Saint-Etienne": { tirsCadres: [3, 4, 4] },
+
+// === CHAMPIONS LEAGUE (autres) ===
+"Ajax": { tirsCadres: [7, 6, 8] },
+"PSV": { tirsCadres: [6, 5, 7] },
+"Feyenoord": { tirsCadres: [5, 6, 6] },
+"Porto": { tirsCadres: [6, 7, 6] },
+"Benfica": { tirsCadres: [6, 5, 7] },
+"Sporting": { tirsCadres: [6, 5, 6] },
+"Braga": { tirsCadres: [5, 5, 6] },
+"Celtic": { tirsCadres: [5, 6, 5] },
+"Rangers": { tirsCadres: [5, 5, 5] },
+"Galatasaray": { tirsCadres: [5, 6, 5] },
+"Fenerbahçe": { tirsCadres: [5, 5, 6] },
+"Besiktas": { tirsCadres: [5, 5, 5] },
+"Olympiakos": { tirsCadres: [5, 5, 5] },
+"Panathinaikos": { tirsCadres: [5, 5, 5] },
+"Salzbourg": { tirsCadres: [5, 5, 6] },
+"Sturm Graz": { tirsCadres: [4, 5, 4] },
+"Club Brugge": { tirsCadres: [5, 5, 6] },
+"Union Saint-Gilloise": { tirsCadres: [4, 5, 5] },
+"Anderlecht": { tirsCadres: [5, 5, 5] },
+"Genk": { tirsCadres: [4, 5, 5] },
+
+// === EUROPA LEAGUE ===
+"Roma (EL)": { tirsCadres: [5, 6, 4] },
+"Lazio (EL)": { tirsCadres: [5, 5, 6] },
+"Manchester United (EL)": { tirsCadres: [6, 5, 7] },
+"Tottenham (EL)": { tirsCadres: [5, 6, 4] },
+"Ajax (EL)": { tirsCadres: [7, 6, 8] },
+"PSV (EL)": { tirsCadres: [6, 5, 7] },
+"Feyenoord (EL)": { tirsCadres: [5, 6, 6] },
+"Porto (EL)": { tirsCadres: [6, 7, 6] },
+"Benfica (EL)": { tirsCadres: [6, 5, 7] },
+"Sporting (EL)": { tirsCadres: [6, 5, 6] },
+"Real Sociedad (EL)": { tirsCadres: [5, 5, 6] },
+"Betis (EL)": { tirsCadres: [5, 6, 4] },
+"Nice (EL)": { tirsCadres: [5, 4, 5] },
+"Lyon (EL)": { tirsCadres: [5, 4, 6] },
+"Fenerbahçe (EL)": { tirsCadres: [5, 5, 6] },
+"Galatasaray (EL)": { tirsCadres: [5, 6, 5] },
+"Besiktas (EL)": { tirsCadres: [5, 5, 5] },
+"Olympiakos (EL)": { tirsCadres: [5, 5, 5] },
+"Rangers (EL)": { tirsCadres: [5, 5, 5] },
+"Celtic (EL)": { tirsCadres: [5, 6, 5] },
+"Salzbourg (EL)": { tirsCadres: [5, 5, 6] },
+"Club Brugge (EL)": { tirsCadres: [5, 5, 6] },
+"Union Saint-Gilloise (EL)": { tirsCadres: [4, 5, 5] },
+"Anderlecht (EL)": { tirsCadres: [5, 5, 5] },
+"Braga (EL)": { tirsCadres: [5, 5, 6] },
+
+// === CONFERENCE LEAGUE ===
+"Fiorentina (CL)": { tirsCadres: [5, 6, 5] },
+"Betis (CL)": { tirsCadres: [5, 6, 4] },
+"Chelsea (CL)": { tirsCadres: [6, 4, 5] },
+"Real Betis (CL)": { tirsCadres: [5, 6, 4] },
+"Villarreal (CL)": { tirsCadres: [5, 6, 5] },
+"Cercle Brugge": { tirsCadres: [4, 4, 5] },
+"Gent": { tirsCadres: [4, 5, 4] },
+"Legia Varsovie": { tirsCadres: [4, 5, 4] },
+"Jagiellonia": { tirsCadres: [4, 5, 4] },
+"Rapid Vienne": { tirsCadres: [5, 5, 5] },
+"LASK": { tirsCadres: [4, 4, 5] },
+"Panathinaikos (CL)": { tirsCadres: [5, 5, 5] },
+"PAOK": { tirsCadres: [5, 5, 5] },
+"Maccabi Tel-Aviv": { tirsCadres: [4, 5, 4] },
+"Olimpija Ljubljana": { tirsCadres: [4, 4, 4] }
+};
+
+function recuperer(){
+    var nomDom = document.getElementById("nom_dom").value;
+    var nomExt = document.getElementById("nom_ext").value;
+    var dataDom = baseDonnees[nomDom];
+    var dataExt = baseDonnees[nomExt];
+    
+    if(dataDom){
+        document.getElementById("dom_m1").value = dataDom.tirsCadres[0];
+        document.getElementById("dom_m2").value = dataDom.tirsCadres[1];
+        document.getElementById("dom_m3").value = dataDom.tirsCadres[2];
+    } else {
+        alert("Equipe domicile non trouvee : " + nomDom);
+    }
+    
+    if(dataExt){
+        document.getElementById("ext_m1").value = dataExt.tirsCadres[0];
+        document.getElementById("ext_m2").value = dataExt.tirsCadres[1];
+        document.getElementById("ext_m3").value = dataExt.tirsCadres[2];
+    } else {
+        alert("Equipe exterieur non trouvee : " + nomExt);
+    }
+}
+
+function predire(){
+    var nomDom = document.getElementById("nom_dom").value;
+    var nomExt = document.getElementById("nom_ext").value;
+    
+    var d1 = parseFloat(document.getElementById("dom_m1").value) || 0;
+    var d2 = parseFloat(document.getElementById("dom_m2").value) || 0;
+    var d3 = parseFloat(document.getElementById("dom_m3").value) || 0;
+    var e1 = parseFloat(document.getElementById("ext_m1").value) || 0;
+    var e2 = parseFloat(document.getElementById("ext_m2").value) || 0;
+    var e3 = parseFloat(document.getElementById("ext_m3").value) || 0;
+    
+    var moyDom = (d1 + d2 + d3) / 3;
+    var moyExt = (e1 + e2 + e3) / 3;
+    var pd = (moyDom * 1.1) * 0.45;
+    var pe = (moyExt * 0.9) * 0.45;
+    var total = pd + pe;
+    
+    var analyse = "";
+    if(moyDom > moyExt + 1.5){
+        analyse = "🔥 " + nomDom + " domine largement";
+    } else if(moyExt > moyDom + 1.5){
+        analyse = "🔥 " + nomExt + " est plus dangereux";
+    } else {
+        analyse = "⚖️ Match equilibre";
+    }
+    
+    document.getElementById("resultat").innerHTML = 
+        "<div class='result-card'>" +
+        "<h3>📊 Moyennes sur 3 matchs</h3>" +
+        "<p><strong>" + nomDom + "</strong> : " + moyDom.toFixed(2) + " tirs cadres/match</p>" +
+        "<p><strong>" + nomExt + "</strong> : " + moyExt.toFixed(2) + " tirs cadres/match</p>" +
+        "<div class='separateur'></div>" +
+        "<h3>🔮 Prediction 1ere MT</h3>" +
+        "<p><strong>" + nomDom + "</strong> : " + pd.toFixed(2) + " tirs cadres</p>" +
+        "<p><strong>" + nomExt + "</strong> : " + pe.toFixed(2) + " tirs cadres</p>" +
+        "<p class='total'>Total estime : " + total.toFixed(2) + "</p>" +
+        "<p class='analyse'>" + analyse + "</p>" +
+        "</div>";
+}
